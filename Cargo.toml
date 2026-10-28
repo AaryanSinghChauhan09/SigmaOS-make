@@ -1,0 +1,11 @@
+[package]
+name = "sigmaos-make"
+version = "0.1.0"
+edition = "2021"
+authors = ["SigmaOS Contributors"]
+description = "SigmaOS make component"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "sigmaos_make"
+path = "src/lib.rs"
