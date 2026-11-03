@@ -1,14 +1,39 @@
-//! SigmaOS make component
+//! SigmaOS-make - SigmaOS Component
 //!
-//! This component provides make functionality for SigmaOS.
+//! Development and system tools for SigmaOS.
 
-#![no_std]
+use anyhow::Result;
+use log::info;
+use serde::{Deserialize, Serialize};
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Config {
+    pub enabled: bool,
+    pub auto_start: bool,
+}
+
+impl Default for Config {
+    fn default() -> Self {
+        Self { enabled: true, auto_start: true }
+    }
+}
+
+pub struct make {
+    config: Config,
+}
+
+impl make {
+    pub fn new(config: Config) -> Self {
+        Self { config }
+    }
+
+    pub fn initialize(&mut self) -> Result<()> {
+        info!("Initializing SigmaOS-make");
+        Ok(())
+    }
+
+    pub fn run(&mut self) -> Result<()> {
+        info!("Running SigmaOS-make");
+        Ok(())
     }
 }
