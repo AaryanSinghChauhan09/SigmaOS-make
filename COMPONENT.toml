@@ -3,7 +3,7 @@ name = "SigmaOS-make"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "make component"
+description = "No GitHub description is set; component scope remains unclassified."
 upstream = []
 
 [contract]
